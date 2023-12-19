@@ -12,7 +12,13 @@ from functionforDownloadButtons import download_button
 
 ###################################
 
-
+def icon(emoji: str):
+    """Shows an emoji as a Notion-style page icon."""
+    st.write(
+        f'<span style="font-size: 78px; line-height: 1">{emoji}</span>',
+        unsafe_allow_html=True,
+    )
+    
 def _max_width_():
     max_width_str = f"max-width: 1800px;"
     st.markdown(
@@ -27,12 +33,13 @@ def _max_width_():
     )
 
 st.set_page_config(page_icon="✂️", page_title="CSV Wrangler")
+icon("✂️")
 
-# st.image("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/balloon_1f388.png", width=100)
-st.image(
-    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/scissors_2702-fe0f.png",
-    width=100,
-)
+# # st.image("https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/balloon_1f388.png", width=100)
+# st.image(
+#     "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/scissors_2702-fe0f.png",
+#     width=100,
+# )
 
 st.title("CSV Wrangler")
 
